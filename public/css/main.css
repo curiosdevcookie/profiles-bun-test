@@ -1,0 +1,69 @@
+/* MAIN SYTLESHEET AS BASIS*/
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Nexa Heavy';
+  src: url('../fonts/Nexa_Heavy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Nexa Regular';
+  src: url('../fonts/Nexa_Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Nexa Text Light';
+  src: url('../fonts/Nexa_Text_Light.otf') format('opentype');
+}
+
+
+/*RESETS*/
+
+:root, html, body
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  --font-headings: 'Nexa Heavy', sans-serif;
+  --font-copy: 'Nexa Regular', sans-serif;
+  --font-light: 'Nexa Text Light', sans-serif;
+
+  --inspired-black: #3a3a3a;
+  --inspired-yellow: #e0b43b;
+  --inspired-white: #f6f6f6; /* TO-DO: Look that value up */
+}
+
+
+/* HEADINGS */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+}
+
+h1 {
+  font-size: calc(3rem + 1vw);
+}
+
+h2 {
+  font-size: calc(2rem + 1vw);
+}
+
+p, input, button, a {
+  font-family: var(--font-copy);
+  font-size: calc(1.2rem + 1vw);
+}
+
+button {
+  padding: 0.2rem calc(0.5rem + 1vw);
+  border-radius: calc(0.2rem + 0.7vw);
+}
+
+
+/* GENERAL */
+
+body {
+  padding: 5rem;
+}
