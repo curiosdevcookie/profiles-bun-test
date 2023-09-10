@@ -3,9 +3,16 @@
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "dotenv-cli": "^7.3.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "postgres": "^3.3.5",
+    "serve-static-bun": "^0.5.3"
   }
 }
