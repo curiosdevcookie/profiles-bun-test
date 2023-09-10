@@ -1,9 +1,17 @@
-const server = Bun.serve({
-  port: 9000,
-  fetch(req) {
-    return new Response(`Bun!`);
-  },
-});
+import serveStatic from "serve-static-bun";
+import Bao from "baojs";
 
-console.log(`Listening on http://localhost:${server.port} ...`);
+const app = new Bao();
+
+app.get(
+  "/public/*any",
+  serveStatic("public", { middlewareMode: "bao", stripFromPathname: "/public" })
+);
+
+app.get("/", (ctx) => ctx.sendText("Hello Bao!"));
+
+const port = 3000;
+app.listen({ port: port });
+
+console.log(`Listening on http://localhost:${port} ...`);
 console.log("Hello via bun 🙂");
